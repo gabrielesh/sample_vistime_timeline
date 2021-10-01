@@ -12,11 +12,16 @@
 # humanities project. A second timeline shows the same timeline, but broken out by the
 # continent(s) each project covers.
 
+install.packages("tidyverse")
+install.packages("here")
+install.packages("vistime")
+
 library(tidyverse)
+library(here)
 library(vistime)
 
 ### Load data and select columns 
-survey_timeline <- read_csv("data/survey_content_202010901.csv") %>% 
+survey_timeline <- read_csv(here("data", "survey_content_202010901.csv")) %>% 
   select(identifier, title, short_title, continents, time_coverage_start, time_coverage_end)
 
 survey_timeline
