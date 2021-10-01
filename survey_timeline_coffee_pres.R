@@ -16,7 +16,7 @@ library(tidyverse)
 library(vistime)
 
 ### Load data and select columns 
-survey_timeline <- read_csv("data/survey_content_20210901.csv") %>% 
+survey_timeline <- read_csv("data/survey_content_202010901.csv") %>% 
   select(identifier, title, short_title, continents, time_coverage_start, time_coverage_end)
 
 survey_timeline
